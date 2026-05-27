@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car upgrading system</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <h1 id="Mamba">Car upgrading system</h1>
+
+        <section class="score-board">
+            <div class="box">
+                <p>Nauda</p>
+                <h2 id="moneyText">0 €</h2>
+            </div>
+
+            <div class="box">
+                <p>Par klikšķi</p>
+                <h2 id="bonusText">10 €</h2>
+            </div>
+
+            <div class="box">
+                <p>Auto ienākumi</p>
+                <h2 id="autoText">0 €/s</h2>
+            </div>
+
+            <div class="box">
+                <p>Mašīnas līmenis</p>
+                <h2 id="levelText">1</h2>
+            </div>
+        </section>
+
+        <section class="car-place">
+            <p id="carName">Lada</p>
+
+            <img id="car" src="https://pngimg.com/uploads/lada/lada_PNG149.png" alt="Car">
+
+            <p id="message">Klikšķini uz mašīnas un pelni naudu!</p>
+        </section>
+
+        <section class="buttons">
+            <button id="name">Car upgrade: 1000 €</button>
+            <button id="engineButton">Engine upgrade: 500 €</button>
+            <button id="garageButton">Garage: 1500 €</button>
+            <button id="nitroButton">Nitro x3: 2000 €</button>
+            <button id="resetButton">Reset game</button>
+        </section>
+
+        <section class="mission">
+            <h2>Misija</h2>
+            <p id="missionText">Sakrāj 3000 €, lai iegūtu bonusu.</p>
+        </section>
+
+        <section class="instruction">
+            <h2>Instruction of the game</h2>
+            <p>
+                Click the car to make cash. Use cash to upgrade your car,
+                buy engine upgrades, garage income and nitro.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
