@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(https://images.steamusercontent.com/ugc/2438013375536940927/D370DBF7BFC83ED36F783F08A598FFF3E71A1D61/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid cyan;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 30px cyan;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 15px cyan;
+}
+
+.score-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.box h2 {
+    color: lime;
+    margin-top: 5px;
+}
+
+.car-place {
+    background: linear-gradient(180deg, rgba(0, 255, 255, 0.15), rgba(0, 0, 0, 0.7));
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#carName {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+#car {
+    max-width: 380px;
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+    transition: 0.15s;
+    filter: drop-shadow(0 0 15px black);
+}
+
+#car:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px cyan);
+}
+
+#car:active {
+    transform: scale(0.92);
+}
+
+#car.nitro {
+    animation: shake 0.15s infinite;
+    filter: drop-shadow(0 0 30px deepskyblue);
+}
+
+@keyframes shake {
+    0% { transform: translateX(0) scale(1.05); }
+    25% { transform: translateX(-5px) scale(1.05); }
+    50% { transform: translateX(5px) scale(1.05); }
+    75% { transform: translateX(-3px) scale(1.05); }
+    100% { transform: translateX(0) scale(1.05); }
+}
+
+#message {
+    min-height: 25px;
+    color: yellow;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00e5ff, #005eff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px cyan;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#resetButton {
+    background: linear-gradient(135deg, red, darkred);
+}
+
+.mission,
+.instruction {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.mission h2,
+.instruction h2 {
+    color: yellow;
+    margin-bottom: 8px;
+}
+
+.instruction p,
+.mission p {
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+    .score-board,
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
